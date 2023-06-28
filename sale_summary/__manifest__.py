@@ -12,5 +12,6 @@
             'views/summary.xml',
 
            ],
+    'images': ['static/description/banner.png'],
 
 }
