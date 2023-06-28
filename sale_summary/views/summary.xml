@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <!-- Find the existing sale order form view -->
+        <record id="view_sale_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <!-- Add the total_invoiced_amount field in the sale order form view -->
+                <div class="oe_title">
+                    <h1>
+                        <!-- Add a placeholder div to create a space on the left side -->
+                        <div style="float: left; width: 50%;"></div>
+                        <div style="float: right; text-align: right;">
+                            <label for="total_invoiced_amount" string="TOTAL INVOICED:" style="font-size: 40px; font-weight: bold; color: red;" />
+                            <field name="total_invoiced_amount" string="TOTAL INVOICED:" widget="monetary" style="font-size: 30px; font-weight: bold; background-color: orange; color: white;"/>
+                        </div>
+                    </h1>
+                </div>
+
+            </field>
+        </record>
+    </data>
+</odoo>
